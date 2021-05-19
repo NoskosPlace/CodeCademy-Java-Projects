@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+//https://www.codecademy.com/courses/learn-java/projects/java-desert-island-playlist
+
+class Playlist {
+  
+  public static void main(String[] args) {
+
+    //create new array list 
+    ArrayList<String> desertIslandPlaylist = new ArrayList<String>();
+    
+    //add 6 songs to the array list
+    desertIslandPlaylist.add("song1");
+    desertIslandPlaylist.add("song2");
+    desertIslandPlaylist.add("song3");
+    desertIslandPlaylist.add("song4");
+    desertIslandPlaylist.add("song5");
+    desertIslandPlaylist.add("song6");
+
+    //get arraylist size
+    System.out.println(desertIslandPlaylist.size());
+
+    //get the index id of song 4 and 6
+    int songa = desertIslandPlaylist.indexOf("song4");
+    int songb = desertIslandPlaylist.indexOf("song6");
+
+    //create temp holder for song 4
+    String tempA = "song4";
+
+    //set song 6 in song 4s index
+    desertIslandPlaylist.set(songa, "song6");
+
+    //print change after moveing 6 to 4
+    System.out.println(desertIslandPlaylist);
+
+    //move 4 to 6s spot
+    desertIslandPlaylist.set(songb, tempA);
+
+    // print after all moves
+    System.out.println(desertIslandPlaylist);
+
+  }
+  
+}
